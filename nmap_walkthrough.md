@@ -285,7 +285,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - We search the 'script.db' file using grep to see what type of scripts contain 'smb' with the command ```grep "smb" script.db```
 - We can see there is a file called "smb-os-discovery.nse", which is the answer.
 
-![image22.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image10.jpg)
+![image22.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image22.jpg)
 
 - **Question 2:** *Read through this script. What does it depend on?*
 - If we output the file, via ```cat smb-os-discovery.nse```, and we scroll down a bit, we can see that under 'dependencies', there is one, 'smb-brute', which is our answer.
