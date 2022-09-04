@@ -244,7 +244,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 - Pretty straightforward answers that can be found in the room.
 
-![image18.jpg](attachment:image18.jpg)
+![image18.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image18.jpg)
 
 ## Task 11 - NSE Scripts - Working with the NSE <a name="task11"></a>
 
@@ -261,13 +261,13 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 1:** *What optional argument can the ```ftp-anon.nse``` script take?*
 - If we go to https://nmap.org/ and we search 'ftp-anon' and click the first link that appears, we are brought to https://nmap.org/nsedoc/scripts/ftp-anon.html where we see that the optional arguement that the script can take is 'maxlist'
 
-![image19.png](attachment:image19.png)
+![image19.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image19.png)
 
 ## Task 12 - NSE Scripts - Searching for Scripts <a name="task12"></a>
 
 - To search for scripts, we can use the Nmap website which has a list of all official scripts or we can search local storage on our attacking machine. Nmap stores it's scripts on Linux, which we can see by changing to the directory via the command ```/usr/share/nmap/scripts``` and seeing what scripts are there.
 
-![image20.png](attachment:image20.png)
+![image20.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image20.png)
 
 - We will use the script ```script.db``` to explore the searching of scripts. This is a formatted text file containing filenames and categories for each available script.
 
@@ -276,7 +276,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - We can use grep to search for text or files. Here we will see where the word 'ftp' appears in scripts with the command ```grep "ftp" script.db```. We can also search for scripts using ```ls```
 - The same techniques can also be used to search for categories of script with the command ```grep "safe" script.db```
 
-![image21.png](attachment:image21.png)
+![image21.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image21.png)
 
 - If we are missing a script, we can use the command ```sudo apt update && sudo apt install nmap``` to make sure the latest version of Nmap is installed and we can also manually download scripts from Nmap with the command ```sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse```. We must then follow this up with ```nmap --script-updatedb```, which updates the ```script.db``` file.
 - If you were to make your own NSE script and add it into Nmap, you would require the same "updatedb" command to load it in.
@@ -285,16 +285,16 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - We search the 'script.db' file using grep to see what type of scripts contain 'smb' with the command ```grep "smb" script.db```
 - We can see there is a file called "smb-os-discovery.nse", which is the answer.
 
-![image22.jpg](attachment:image22.jpg)
+![image22.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image10.jpg)
 
 - **Question 2:** *Read through this script. What does it depend on?*
 - If we output the file, via ```cat smb-os-discovery.nse```, and we scroll down a bit, we can see that under 'dependencies', there is one, 'smb-brute', which is our answer.
 
-![image23.png](attachment:image23.png)
+![image23.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image23.png)
 
-![image24.jpg](attachment:image24.jpg)
+![image24.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image24.jpg)
 
-![image25.png](attachment:image25.png)
+![image25.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image25.png)
 
 ## Task 13 - Firewall Evasion <a name="task13"></a>
 
@@ -317,11 +317,11 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 2:** *[Research] Which Nmap switch allows you to append an arbitrary length of random data to the end of packets?*
 - Use the command ```nmap -h``` and scroll down to 'FIREWALL/IDS EVASION AND SPOOFING' seeing as this task is about 'Firewall Evasion'. There you will see the switch ```--data-length <num>``` which is our answer.
 
-![image26.png](attachment:image26.png)
+![image26.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image26.png)
 
-![image27.jpg](attachment:image27.jpg)
+![image27.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image27.jpg)
 
-![image28.png](attachment:image28.png)
+![image28.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image28.png)
 
 ## Task 14 - Practical <a name="task14"></a>
 
@@ -332,12 +332,12 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 1:** *Does the target (MACHINE_IP) respond to ICMP (ping) requests (Y/N)?*
 - Ping your own TryHackMe machine ip address and wait a minute or 2. We see we get no response. We see in the ping statistics that 87 packets were transmitted but 0 was received with a 100% packet loss and hence the answer here is 'N'.
 
-![image29.png](attachment:image29.png)
+![image29.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image29.png)
 
 - **Question 2:** *Perform an Xmas scan on the first 999 ports of the target -- how many ports are shown to be open or filtered?*
 - The Xmas scan switch is ```-sX```. We will scan ports 1 to 999. I like to use the switch ```-vv``` for extra verbosity so the result is easier to read. The first time I tried the Xmas scan, it did not work as I did not use the ```-Pn``` switch, which is a way around ICMP blocking as we know from Task 13. So, the correct command is ```nmap -sX -p1-999 -vv 10.10.132.50 -Pn```, which takes a bit longer to run. When the scan is done, all 999 ports are shown as ```open|filtered```.
 
-![image30.png](attachment:image30.png)
+![image30.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image30.png)
 
 - **Question 3:** *There is a reason given for this -- what is it? Note: The answer will be in your scan results. Think carefully about which switches to use -- and read the hint before asking for help!*
 - We can see from the scan, the reason for the 999 ports being shown as open|filtered is because we get 'no-response' from them, and this is our answer.
@@ -345,7 +345,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 4:** *Perform a TCP SYN scan on the first 5000 ports of the target -- how many ports are shown to be open?*
 - Here, we use a TCP SYN scan, which we first came across in Task 6. It is basically the same command as question 2. We use the ```-Pn``` switch again as by default Nmap only does it's port scans against hosts that are up and we want Nmap to perform it's fucntion as if the host is active. So the command is ```nmap -sS -p1-5000 -vv 10.10.132.50 -Pn``` where we see that 5 ports are open.
 
-![image31.png](attachment:image31.png)
+![image31.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image31.png)
 
 - **Question 5:** *Open Wireshark (see Cryillic's Wireshark Room for instructions) and perform a TCP Connect scan against port 80 on the target, monitoring the results. Make sure you understand what's going on.*
 - No answer needed here that needs going through.
@@ -353,9 +353,9 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 6:** *Deploy the ```ftp-anon``` script against the box. Can Nmap login successfully to the FTP server on port 21? (Y/N)*
 - We looked at scripts earlier so let's see if we can login successfully with the ftp-anon script. The command is ```nmap --script=ftp-anon -vv 10.10.132.50 -Pn``` where we see that 'anonymous FTP login allowed', so our answer is 'Y'
 
-![image32.jpg](attachment:image32.jpg)
+![image32.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image32.jpg)
 
-![image33.png](attachment:image33.png)
+![image33.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image33.png)
 
 ## Task 15 - Conclusion <a name="task15"></a>
 
@@ -365,4 +365,4 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 **End Questions**
 - Read the conclusion and click submit and you are done!
 
-![image34.png](attachment:image34.png)
+![image34.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image34.png)
