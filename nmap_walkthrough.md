@@ -46,7 +46,7 @@
 
 - The answers to the questions at the end are straight forward enough and found in the text in the room.
 
-![image2.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image2.png)
+![image2.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image2.jpg)
 
 ## Task 3 - Nmap Switches <a name="task3"></a>
 
