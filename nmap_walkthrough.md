@@ -259,7 +259,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 **End Questions**
 
 - **Question 1:** *What optional argument can the ```ftp-anon.nse``` script take?*
-- If we go to https://nmap.org/ and we search 'ftp-anon' and click the first link that appears, we are brought to https://nmap.org/nsedoc/scripts/ftp-anon.html where we see that the optional arguement that the script can take is 'maxlist'
+- If we go to https://nmap.org/ and we search 'ftp-anon' and click the first link that appears, we are brought to https://nmap.org/nsedoc/scripts/ftp-anon.html where we see that the optional arguement that the script can take is 'maxlist'.
 
 ![image19.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image19.png)
 
