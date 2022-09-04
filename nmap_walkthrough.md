@@ -46,7 +46,7 @@
 
 - The answers to the questions at the end are straight forward enough and found in the text in the room.
 
-![image2.jpg](attachment:image2.jpg)
+![image2.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image2.png)
 
 ## Task 3 - Nmap Switches <a name="task3"></a>
 
@@ -55,13 +55,13 @@
 - We can type in ```nmap``` in our terminal and we see some of the different switches.
 - We can type in ```nmap -h``` for some help options.
 
-![image3.png](attachment:image3.png)
+![image3.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image3.png)
 
-![image4.png](attachment:image4.png)
+![image4.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image4png)
 
 - We can also view the nmap manual by typing in ```man nmap``` and you see this.
 
-![image5.png](attachment:image5.png)
+![image5.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image5.png)
 
 **End Questions**
 
@@ -69,14 +69,14 @@
 - A Syn Scan is the default and most popular scan in Nmap and is relitively unobtrusive and stealthy as it never completes the TCP connection.
 - A UDP scan is slower and more difficult than TCP scans.
 
-![image6.png](attachment:image6.png)
+![image6.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image6.png)
 
-![image7.jpg](attachment:image7.jpg)
+![image7.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image7.png)
 
 - The next 8 answers are also found in the command ```nmap -h```
 - You just have to search through the sections to find them, but they are there!
 
-![image8.jpg](attachment:image8.jpg)
+![image8.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image8.png)
 
 - **Question 11:** We need to set the Nmap timing template to level 5. There is various templates, -T0, -T1, -T2, -T3, -T4, -T5 and each scan accelerates in speed. But higher speed scans are noisier and can incur errors. We would set the timing template to level 5 by typing in ```-T5```
 
@@ -90,7 +90,7 @@
 
 - **Question 16:** To activate all scripts in the 'vuln' category we would use ```--script=vuln```
 
-![image9.png](attachment:image9.png)
+![image9.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image9.png)
 
 ## Task 4 - Scan Types - Overview <a name="task4"></a>
 
@@ -102,7 +102,7 @@
 
 - There is no answers required to the questions here, just read through the scan types and click submit.
 
-![image10.png](attachment:image10.png)
+![image10.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image10.png)
 
 ## Task 5 - Scan Types - TCP Connect Scans <a name="task5"></a>
 
