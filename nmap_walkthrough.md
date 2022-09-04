@@ -57,7 +57,7 @@
 
 ![image3.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image3.png)
 
-![image4.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image4png)
+![image4.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image4.png)
 
 - We can also view the nmap manual by typing in ```man nmap``` and you see this.
 
@@ -71,12 +71,12 @@
 
 ![image6.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image6.png)
 
-![image7.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image7.png)
+![image7.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image7.jpg)
 
 - The next 8 answers are also found in the command ```nmap -h```
 - You just have to search through the sections to find them, but they are there!
 
-![image8.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image8.png)
+![image8.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image8.jpg)
 
 - **Question 11:** We need to set the Nmap timing template to level 5. There is various templates, -T0, -T1, -T2, -T3, -T4, -T5 and each scan accelerates in speed. But higher speed scans are noisier and can incur errors. We would set the timing template to level 5 by typing in ```-T5```
 
@@ -116,7 +116,7 @@
 
 Here is a visual of the process from TryHackMe where my computer is the client.
 
-![image11.png](attachment:image11.png)
+![image11.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image11.png)
 
 - RFCs produced by the IETF (Internet Engineering Task Force) cover many aspects of computer networking. They describe the Internet's technical foundations, such as addressing, routing, and transport technologies.
 - According to RFC 793, when a port is closed:<blockquote class="blockquote">"... If the connection does not exist (CLOSED) then a reset is sent in response to any incoming segment except another reset.  In particular, SYNs addressed to a non-existent connection are rejected by this means."</blockquote>
@@ -130,7 +130,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 - These are fairly straightforward and the answers are contained in the information in the room.
 
-![image12.jpg](attachment:image12.jpg)
+![image12.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image12.jpg)
 
 ## Task 6 - Scan Types - SYN Scans <a name="task6"></a>
 
@@ -144,7 +144,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 <p>Here is a visual of the process from TryHackMe where my computer is the client.<p>
 
-![image13.png](attachment:image13.png)
+![image13.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image13.png)
 
 - SYN scans have both pros and cons
 
@@ -166,7 +166,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 - These are fairly straightforward again and the answers are contained in the information in the room.
 
-![image14.jpg](attachment:image14.jpg)
+![image14.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image14.jpg)
 
 ## Task 7 - Scan Types - UDP Scans <a name="task7"></a>
 
@@ -187,7 +187,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 - The answers are contained in the information in the room so should be easy to answer.
 
-![image15.jpg](attachment:image15.jpg)
+![image15.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image15.jpg)
 
 ## Task 8 - Scan Types - NULL, FIN and Xmas <a name="task8"></a>
 
@@ -208,7 +208,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 
 - The answers are contained in the text in the room so should be easy enough to answer.
 
-![image16.jpg](attachment:image16.jpg)
+![image16.jpg](https://github.com/starscreamF22/TryHackMe/blob/main/images/image16.jpg)
 
 ## Task 9 - Scan Types - ICMP Network Scanning <a name="task9"></a>
 
@@ -225,7 +225,7 @@ Here is a visual of the process from TryHackMe where my computer is the client.
 - **Question 1:** *How would you perform a ping sweep on the 172.16.x.x network (Netmask: 255.255.0.0) using Nmap? (CIDR notation)*
 - If you internet search 'CIDR notation table' you will find that 172.16.x.x would fall in the /16 range, which we are also told in the hint, so the answer to this question woule be ```nmap -sn 172.16.0.0/16```
 
-![image17.png](attachment:image17.png)
+![image17.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image17.png)
 
 ## Task 10 - NSE Scripts - Overview <a name="task10"></a>
 
