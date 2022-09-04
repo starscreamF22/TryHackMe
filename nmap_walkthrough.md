@@ -24,7 +24,7 @@
 - I prefer to connect via OpenVPN and use my own Kali Linux based machine in a VMware Workstation.
 - Also, note that this machine is for scanning purposes only. You do not need to log into it, or exploit any vulnerabilities to gain access.
 
-![image1.png](attachment:image1.png)
+![image1.png](https://github.com/starscreamF22/TryHackMe/blob/main/images/image1.png)
 
 ## Task 2 - Introduction <a name="task2"></a>
 
